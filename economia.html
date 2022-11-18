@@ -700,21 +700,16 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
       Your browser does not support the audio element.
     </audio>
 
-      <button id='share-audio-whatsapp-button' style="background-color:transparent; border: none;">
-        <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" width="45" height="45" alt="whatsapplink"/>
-      </button>
-    </div>
+
+    <button id='share-audio-whatsapp-button' style="background-color:transparent; border: none;">
+      <img src = "./assets/share_FILL1_wght400_GRAD0_opsz48.svg" width="30" height="30" alt="share"/>
+    </button>
+
+  </div>
     
-    <br/>
-      <ul class="content-unordered-list">
-        <li>
-          <a id='share-audio-whatsapp-link'>Compartilhe esse áudio!</a>
-        </li>
-      </ul>
 
       <script>
-      const shareButton = document.getElementById("share-audio-whatsapp-button");
-        const shareLink = document.getElementById("share-audio-whatsapp-link");
+        const shareButton = document.getElementById("share-audio-whatsapp-button");
         const urlToFile = async (url) => {
           const response = await fetch(url);
           const blob = await response.blob();
@@ -722,7 +717,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
           return file;
         };
         
-        [shareButton, shareLink].forEach(function(element){
+        [shareButton].forEach(function(element){
           element.addEventListener("click", async () => {
           if (window.navigator.share) {
             const file = await urlToFile(
