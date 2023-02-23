@@ -36,7 +36,7 @@
   /* (E) RANGE SLIDERS */
   /* (E1) HIDE DEFAULT */
   #aWrap input[type="range"] {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     appearance: none;
     border: none;
     outline: none;
@@ -60,7 +60,7 @@
   
   /* (E3) CUSTOM SLIDER BUTTON */
   #aWrap input[type=range]::-webkit-slider-thumb {
-    width: 16px; height: 16px;
+    width: 16px; height: 1px;
     border-radius: 50%;
     border: 0;
     background: #fff;
@@ -82,8 +82,12 @@
     width: 100%;
     padding: 10px;
     margin: 10px;
+    margin-bottom: auto;
     color: #454545;
     background: #e9e7e7;
+    height: 150px;
+    overflow: hidden;
+    overflow-y: scroll;
   }
   .aRow {
     cursor: pointer;

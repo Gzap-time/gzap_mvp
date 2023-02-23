@@ -18,8 +18,6 @@
                 aNow = document.getElementById("aNow"),
                 aTime = document.getElementById("aTime"),
                 aSeek = document.getElementById("aSeek"),
-                aVolume = document.getElementById("aVolume"),
-                aVolIco = document.getElementById("aVolIco"),
                 aList = document.getElementById("aList");
         
           // (A3) BUILD PLAYLIST
@@ -127,21 +125,14 @@
             });
           });
         
-          // (F) VOLUME
-          aVolume.addEventListener("change", () => {
-            audio.volume = aVolume.value;
-            aVolIco.innerHTML = (aVolume.value==0 ? "volume_mute" : "volume_up");
-          });
         
           // (G) ENABLE/DISABLE CONTROLS
           audio.addEventListener("canplay", () => {
             aPlay.disabled = false;
-            aVolume.disabled = false;
             aSeek.disabled = false;
           });
           audio.addEventListener("waiting", () => {
             aPlay.disabled = true;
-            aVolume.disabled = true;
             aSeek.disabled = true;
           });
         });
