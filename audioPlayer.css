@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     align-items: center;
     box-sizing: border-box;
-    max-width: 500px;
+    max-width: 1000px;
     padding: 10px;
     border-radius: 10px;
     background: #F2F2F2;
@@ -60,16 +60,16 @@
   
   /* (E3) CUSTOM SLIDER BUTTON */
   #aWrap input[type=range]::-webkit-slider-thumb {
-    width: 16px; height: 1px;
+    width: 2px; height: 2px;
     border-radius: 50%;
     border: 0;
-    background: #fff;
+    background: #C3170B;
   }
   #aWrap input[type=range]::-moz-range-thumb {
     width: 16px; height: 16px;
     border-radius: 50%;
     border: 0;
-    background: #fff;
+    background: #C3170B;
   }
   
   /* (F) VOLUME */
